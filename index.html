@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="head">
+                <div class="innerbox">
+                    <h1>Quiz App</h1>
+                </div>
+            </div>
+            <div class="content">
+                <!-- form start -->
+                <form action="quiz.php" method="post" class="row m-3" id="quizForm">
+                    <!-- div category -->
+                    <div class="form-box col-12 p-2 form-control d-flex flex-column mb-3">
+                        <label class="text-black-50" for="category">Choose Category</label>
+                         <select name="category" id="category"  >
+                        <option value="">Any Category</option>
+                    </select>
+                    </div>
+                    <!-- div difficulty -->
+                    <div class="form-box col-12 p-2 form-control d-flex flex-column mb-3">
+                        <label class="text-black-50" for="difficulty">Choose Difficulty Level</label>
+                         <select name="difficulty" id="difficulty"  >
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                    </select>
+                    </div>
+                    <!-- div quiz numbers -->
+                    <div class="form-box col-12 p-2 form-control d-flex flex-column mb-3">
+                        <label class="text-black-50 m-0 " for="qNumber">Number of Questions</label>
+                      <input type="number" id="qNumber" min="1" max="50" name="qNumbers">
+                    </div>
+                    <!-- stat send -->
+                    <button type="submit" class="btn w-100">Start</button>
+                   
+                </form>
+                <!-- end form -->
+            </div>
+            <!-- start alt answer div -->
+            <div class="ans hide">
+                <div class="categLine">
+                    <a href="" class="catName">category name</a>
+                    <a href="" class="qNum">quiz number</a>
+                </div>
+                <div class="question-wrapper">
+                    <h5 class="question-text">question</h5>
+                    <div >
+                        <ul class="chAns">
+                            <li >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p>Score: <span class="score">0</span></p>
+                <button class="next-question hide">Next Question</button>
+                <button class="retry hide">Try Again</button>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

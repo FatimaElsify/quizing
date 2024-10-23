@@ -1,0 +1,182 @@
+main{
+    background-color: rgb(216, 136, 209);
+    min-height:100vh ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.head{
+    padding: 10px 20px;
+    
+    width: fit-content;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+.innerbox{
+    background-color: aliceblue;
+    padding: 10px 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    
+}
+.head::before{
+    content: "";
+    width: 140%;
+    height: 140%;
+    position: absolute;
+    background:linear-gradient(to right , rgba(122, 154, 216, 0.936) 50% ,rgb(174, 78, 219) 50%);
+    top: -20%;
+    left: -20%;
+    z-index: -2;
+    animation:round 5s linear infinite ;
+    -webkit-animation:round 5s linear infinite ;
+}
+@keyframes round{
+    0% {
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+}
+50%{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+75%{
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+}
+100%{
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+}
+select ,input{outline: none;
+    border: none;
+    font-size: 13px;
+}
+label{
+    font-size: 12px;
+}
+.btn{
+    background-color: rgb(157, 62, 166);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    color: white;
+}
+
+/* start alternative div  of answer */
+.ans{
+    background-color: aliceblue;
+    padding: 50px;
+    margin-top: 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.categLine{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    a{ background-color:rgb(157, 62, 166);
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        text-decoration: none;
+}}
+.next-question ,.retry{
+    background-color: rgb(157, 62, 166);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.next-question:hover {
+    background-color: rgb(247, 244, 243);
+    color: rgb(157, 62, 166);
+}
+
+.retry:hover {
+    background-color: rgb(247, 244, 243);
+    color: rgb(157, 62, 166);
+}
+.categLine a:active{
+    background-color: rgb(247, 244, 243);
+    color:rgb(157, 62, 166) ;
+}
+.quest{
+    color: rgb(157, 62, 166);
+    text-align: center;
+}
+ul li{
+    border: 2px blaxl solid;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+p{
+    color: rgb(157, 62, 166);
+    font-size: 22px;
+    text-align: center;
+}
+.hide{
+    display: none;
+}
+ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.chAns li{
+ background-color: rgb(154, 196, 252);
+ border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    margin-bottom: 20px;
+    list-style: none;
+    text-align: center;
+    margin: 10px;
+    padding: 5px 10px;
+
+}
+.chAns li:hover{
+    background-color: rgb(204, 134, 218);
+}
